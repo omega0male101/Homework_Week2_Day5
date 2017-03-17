@@ -8,9 +8,9 @@ class TestSong < Minitest::Test
     @song1 = Song.new("Man who sold the World", "Spice Girls")
   end
 
-  def test_song_name
-    assert_equal("Man who sold the World", @song1.song_name)
-  end
+  # def test_song_name
+  #   assert_equal("Man who sold the World", Song.pick_song)
+  # end
 
   def test_song_artist
     assert_equal("Spice Girls", @song1.song_artist)

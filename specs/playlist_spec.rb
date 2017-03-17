@@ -2,7 +2,7 @@ require('minitest/autorun')
 require_relative('../playlist')
 require_relative('../songs')
 
-class TestPLaylist < Minitest::Test
+class TestPlaylist < Minitest::Test
 
   def setup
     @playlist = Playlist.new()
@@ -16,6 +16,5 @@ class TestPLaylist < Minitest::Test
     assert_equal("Bowie", @playlist.song1.song_artist)
   end
 
-
-
 end
+
