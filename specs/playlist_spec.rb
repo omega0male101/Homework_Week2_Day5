@@ -9,12 +9,16 @@ class TestPlaylist < Minitest::Test
   end
 
   def test_song_name
-    assert_equal("Man who sold the World", @playlist.song1.song_name)
+    assert_equal("Man who sold the World", @Playlist.song1.song_name)
   end
 
   def test_song_artist
-    assert_equal("Bowie", @playlist.song1.song_artist)
+    assert_equal("David Bowie", @Playlist.song1.song_artist)
   end
+
+  # def test_list_all_songs
+  #   assert_equal("??", @playlist.list_all_songs)
+  # end
 
 end
 

@@ -38,9 +38,29 @@ class RoomTest < MiniTest::Test
      assert_equal(1, @room.chill_room_count)
   end
 
+  def test_remove_from_room()
+    @room.empty()
+
+      @room.add_to_room(@guest2, "rock")
+      @room.remove_from_room(@guest2, "rock")
+     assert_equal(0, @room.rock_room_count)
+
+      @room.add_to_room(@guest2, "pop")
+      @room.remove_from_room(@guest2, "pop")
+     assert_equal(0, @room.pop_room_count)
+
+      @room.add_to_room(@guest2, "chill")
+      @room.remove_from_room(@guest2, "chill")
+     assert_equal(0, @room.chill_room_count)
+  end
+
   def test_empty()
     @room.empty()
     assert_equal(0, @room.total_guest_count)
   end
-  
+
+  def test_play_song_fee
+    assert_equal(8, @room.play_song_fee(10))
+  end
+
 end
