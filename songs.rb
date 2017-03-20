@@ -16,10 +16,10 @@ class Song
     return @artist
   end
 
-  def pick_song
-    return rand(@title)
+  # def pick_song
+  #   return Song.sample
+  # end
 
-  end
 
 end
 
